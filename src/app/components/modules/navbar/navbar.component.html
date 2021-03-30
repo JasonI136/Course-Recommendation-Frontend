@@ -1,0 +1,53 @@
+<section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+    <div class="container">
+
+         <div class="navbar-header">
+              <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+                   <span class="icon icon-bar"></span>
+              </button>
+
+              <!-- lOGO TEXT HERE -->
+              <a routerLink='' class="navbar-brand" ><img class="UTSIcon" src="assets/images/CourseREC.png"> </a>
+              
+         </div>
+
+         <!-- MENU LINKS -->
+         <div class="collapse navbar-collapse">
+           
+
+              <ul class="NavbarAligned nav navbar-nav navbar-nav-first ">
+                   <li><a routerLink='' class="smoothScroll">Home</a></li>
+                  
+                    <li class="dropdown">
+                        <a class="smoothScroll dropbtn">Courses</a>
+                        <div class="dropdown-content">
+                            <a routerLink='course/courseRecommendations'>Course Recommendation</a>
+                            <a href='https://www.handbook.uts.edu.au/directory/courses.html'>Course List</a>
+                          </div>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="smoothScroll dropbtn">Course Areas</a>
+                        <div class="dropdown-content">
+                            <a href="https://www.uts.edu.au/about/faculties/overview">Faculties List</a>
+                          </div>
+                    </li>
+               
+                    <li><a routerLink='subject/subjectEntry' class="smoothScroll">Subjects</a></li>
+
+                    <li><a href='http://canvas.uts.edu.au/' class="smoothScroll">Canva</a></li>
+                   
+              </ul>
+
+              <ul class="NavbarAligned nav navbar-nav navbar-right">
+                <li><a routerLink='accounts/login' class="smoothScroll">Login</a></li>
+                <li><a routerLink='accounts/registration' class="smoothScroll">Create Account</a></li>
+                <li><a routerLink='contactUs' class="smoothScroll"><i class="fa fa-phone"></i>Contact Us</a></li>
+              </ul>
+
+
+         </div>
+    </div>
+</section>

@@ -12,6 +12,8 @@ import { CourseRecommendationsComponent } from './components/Course/course-recom
 import { IndexComponent } from './components/index/index.component';
 import { SubjectEntryComponent } from './components/Subject/subject-entry/subject-entry.component';
 import { SubjectListComponent } from './components/Subject/subject-list/subject-list.component';
+import { NavbarComponent } from './components/modules/navbar/navbar.component';
+import { FooterComponent } from './components/modules/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SubjectListComponent } from './components/Subject/subject-list/subject-
     CourseRecommendationsComponent,
     IndexComponent,
     SubjectEntryComponent,
-    SubjectListComponent
+    SubjectListComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
