@@ -14,6 +14,9 @@ import { SubjectEntryComponent } from './components/Subject/subject-entry/subjec
 import { SubjectListComponent } from './components/Subject/subject-list/subject-list.component';
 import { NavbarComponent } from './components/modules/navbar/navbar.component';
 import { FooterComponent } from './components/modules/footer/footer.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { ContactService } from './Services/contact.service';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,13 @@ import { FooterComponent } from './components/modules/footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    ContactService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

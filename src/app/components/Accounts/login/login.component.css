@@ -82,11 +82,12 @@ fieldset {
 }
 
 .forgot-password{
-    color: #333;
+    color: grey;
     font-weight: bold;
-    margin:10px auto 30px 50px;
+    
+
 }
 
 .forgot-password:hover{
-  color:#3f51b5;
+  color:lightskyblue;
 }
