@@ -52,4 +52,18 @@
     margin-top: -3em;
   }
 
+  :root {
+    /* Colors */
+    --dim-gray: rgba(95, 95, 95, 1);
+    --light-sea-green: rgba(41, 202, 142, 1);
+    --white:  rgb(255, 255, 255);
+  
+    /* Typographies */
+    /* arial-27-bold */
+    --arial-27-bold-family: "Arial";
+    --arial-27-bold-size: 27px;
+    --arial-27-bold-weight: 700;
+    --arial-27-bold-line-height: normal;
+  }
+
   
