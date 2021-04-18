@@ -1,3 +1,7 @@
+#formcontainer{
+    width: 650px;
+    margin: 0 auto;
+
 .completed-subjects {
   height: 300px;
   width: 350px;
@@ -36,4 +40,5 @@ padding: 20px, 20px, 20px, 20px;
   font-size: var(--arial-27-bold-size);
   font-weight: var(--arial-27-bold-weight);
   line-height: var(--arial-27-bold-line-height);
+
 }
