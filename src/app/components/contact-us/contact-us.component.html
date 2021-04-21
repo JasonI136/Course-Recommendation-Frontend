@@ -1,10 +1,13 @@
+<header>
+     <title>UTS Course Rec - Contact Us</title>
+</header>
+   
+
 <!-- CONTACT -->
 <section id="contact">
     <div class="container">
          <div class="row">
-
               <div class="col-md-6 col-sm-12">
-                  
                    <form id="contact-form" role="form" action="" method="post" [formGroup]="FormData" (ngSubmit)="onSubmit(FormData.value)">
                         <div class="section-title">
                              <h2>Contact us <small>we love conversations. let us talk!</small></h2>
@@ -21,7 +24,6 @@
                         <div class="col-md-4 col-sm-12">
                              <input type="submit" class="form-control" name="send message" value="Send Message" [disabled]="!FormData.valid">
                         </div>
-
                    </form>
               </div>
 

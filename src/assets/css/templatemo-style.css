@@ -80,7 +80,7 @@ https://templatemo.com/tm-516-known
   }
 
   a:hover, a:active, a:focus {
-    color: #29ca8e;
+    color: white;
     outline: none;
   }
 
@@ -564,14 +564,6 @@ https://templatemo.com/tm-516-known
   .courses-author span {
     display: inline-block;
     vertical-align: middle;
-  }
-
-  .courses-author img {
-    display: inline-block !important;
-    border-radius: 50px;
-    width: 50px !important;
-    height: 50px;
-    margin-right: 10px;
   }
 
   .courses-price {

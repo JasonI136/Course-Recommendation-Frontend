@@ -9,7 +9,8 @@ import { CourseRecommendationsComponent } from './components/Course/course-recom
 import { IndexComponent } from './components/index/index.component';
 import { SubjectEntryComponent } from './components/Subject/subject-entry/subject-entry.component';
 import { SubjectListComponent } from './components/Subject/subject-list/subject-list.component';
-import { UserInterestComponent } from './user-interest/user-interest.component';
+import { UserInterestComponent } from './components/user-interest/user-interest.component';
+import { UserAuthenticationGuard } from './Guards/user-authentication.guard';
 
 const routes: Routes = [
   {
@@ -45,7 +46,8 @@ const routes: Routes = [
   {
     path: 'course/courseRecommendations',
     pathMatch: 'full',
-    component:CourseRecommendationsComponent
+    component:CourseRecommendationsComponent,
+    canActivate: [UserAuthenticationGuard]
   },
   {
     path: 'contactUs',

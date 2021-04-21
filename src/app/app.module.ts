@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,7 +17,7 @@ import { FooterComponent } from './components/modules/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './Services/contact.service';
-import { UserInterestComponent } from './user-interest/user-interest.component';
+import { UserInterestComponent } from './components/user-interest/user-interest.component';
 import {FormsModule} from '@angular/forms';
 
 @NgModule({
@@ -41,10 +41,11 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [
-    ContactService
+    ContactService,
+    Title
   ],
   bootstrap: [AppComponent]
 })

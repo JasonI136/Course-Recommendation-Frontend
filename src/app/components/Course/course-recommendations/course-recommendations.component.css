@@ -1,44 +1,82 @@
-#formcontainer{
-    width: 650px;
-    margin: 0 auto;
+section {
+  position: relative;
+  padding: 40px 0;
 }
-.completed-subjects {
-  height: 300px;
-  width: 350px;
+
+.recommendedSubjecsTitle{
+  padding-left:15px;
+  color:white;
+}
+
+.recommended-subjects-container {
   overflow: scroll;
-  background-color: #EDEDED;
-  padding: 10px;
-  float: left;
-  scrollbar-color: lightgrey;
+  background-color: grey;
+  padding-top: 15px;
+  border-radius: 12px;
+  float:initial;
 }
 
-.recommended-subjects {
-  height: 300px;
-  width: 350px;
+#recommendedName{
+  color: white;
+  font-size: 15px;
+  display: inline-block
+}
+
+.courses-info {
+  border-top: 1px solid #f0f0f0;
+  position: relative;
+  clear: both;
+  padding: 15px 25px;
+  border-radius: 6px;
+}
+
+.courses-author img {
+  display: inline-block !important;
+  width: 50px;
+  margin-right: 10px;
+}
+
+.courses-price span {
+  background: grey;
+  border-radius: 2px;
+  color: #ffffff;
+  width: 125px;
+  display: block;
+  padding: 5px 10px;
+  text-align: center;
+
+}
+
+.courses-thumb {
+  background: #f9f9f9;
+}
+
+.courses-thumb:hover {
+  background: #29ca8e;
+
+}
+.subjectRecommendationBlock{
+  padding-bottom:12px;
+}
+
+/* ================================================= */
+/* == SECTION BELOW IS FOR THE COMPLETED SUBJECTS == */
+/* ================================================= */
+
+.CompletedContainer{
+  padding-bottom:50px;
+  
+}
+
+.completed-subjects-container {
   overflow: scroll;
-  background-color: #EDEDED;
-  padding: 10px;
-  float: right;
-  scrollbar-color: lightgrey;
+  background-color: #252020;
+  padding-top: 15px;
+  border-radius: 12px;
+  float:initial;
 }
 
-.column1 {
-padding: 20px, 20px, 20px, 20px;
-}
-
-.title1 {
-  color: var(--dim-gray);
-  font-family: var(--arial-27-bold-family);
-  font-size: var(--arial-27-bold-size);
-  font-weight: var(--arial-27-bold-weight);
-  line-height: var(--arial-27-bold-line-height);
-}
-
-.title2 {
-  color: var(--light-sea-green);
-  font-family: var(--arial-27-bold-family);
-  font-size: var(--arial-27-bold-size);
-  font-weight: var(--arial-27-bold-weight);
-  line-height: var(--arial-27-bold-line-height);
-
+.completedSubjectsTitle{
+  padding-left:15px;
+  color:white;
 }

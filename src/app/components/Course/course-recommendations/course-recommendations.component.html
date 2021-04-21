@@ -1,44 +1,117 @@
-<link ref="stylesheet" href="course-recommendations.component.css">
+<header>
+  <title>UTS Course Rec - Recommendation</title>
+</header>
 
-
-
-
-
-<section id="about">
+<section>
   <div class="container">
     <div class="row">
+      <div class="recommended-subjects-container">
+        <h2 class='recommendedSubjecsTitle'>
+          Recommended Subjects <h2 id="recommendedName">for John Doe</h2>
+        </h2>
 
-       <div class="completed-subjects">
-        <p class="title1">Completed Subjects</p>
-         <div>Mathematical Modelling 1</div>
-         <div>Engineering Communication</div>
-         <div>Applications Programming</div>
-         <div>Business Requirements Modelling</div>
-         <div>Mathematical Modelling 2</div>
-         <div>Systems Testing and Quality Management</div>
-         <div>Database Fundamentals</div>
-         <div>Data Structures and Algorithms</div>
-         <div>Software Engineering Studio 1A</div>
-         <div>Design and Innovation Fundamentals</div>
-         <div>Information System Development Methodologies</div>
-      </div>
+        <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+          <a href="#">
+            <div class="item courses-info courses-thumb">
+              <div class="courses-author">
+                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon" alt="">
+                <span>Database Fundamentals</span>
+              </div>
+            </div>
+          </a>
+        </div>
 
-      <div class="recommended-subjects">
-       <p class="title2">Recommended Subjects</p>
-         <div>Mathematical Modelling 1</div>
-         <div>Engineering Communication</div>
-         <div>Applications Programming</div>
-         <div>Business Requirements Modelling</div>
-         <div>Mathematical Modelling 2</div>
-         <div>Systems Testing and Quality Management</div>
-         <div>Database Fundamentals</div>
-         <div>Data Structures and Algorithms</div>
-         <div>Software Engineering Studio 1A</div>
-         <div>Design and Innovation Fundamentals</div>
-         <div>Information System Development Methodologies</div>
+        <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+          <a href="#">
+            <div class="item courses-info courses-thumb">
+              <div class="courses-author">
+                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon" alt="">
+                <span>Design and Innovation Fundamentals</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+          <a href="#">
+            <div class="item courses-info courses-thumb">
+              <div class="courses-author">
+                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon" alt="">
+                <span>Software Engineering Studio 1A</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+          <a href="#">
+            <div class="item courses-info courses-thumb">
+              <div class="courses-author">
+                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon" alt="">
+                <span>Information System Development Methodologies</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
       </div>
-      
     </div>
   </div>
 </section>
 
+<hr>
+
+<div class="container CompletedContainer">
+  <div class="row">
+    <div class="completed-subjects-container">
+      <h2 class='completedSubjectsTitle'>
+        Your Completed Subjects 
+      </h2>
+
+      <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+        <a href="#">
+          <div class="item courses-info courses-thumb">
+            <div class="courses-author">
+              <img src="assets/images/TickIcon.png" class="img-responsive CourseIcon" alt="">
+              <span>Database Fundamentals</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+        <a href="#">
+          <div class="item courses-info courses-thumb">
+            <div class="courses-author">
+              <img src="assets/images/TickIcon.png" class="img-responsive CourseIcon" alt="">
+              <span>Design and Innovation Fundamentals</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+        <a href="#">
+          <div class="item courses-info courses-thumb">
+            <div class="courses-author">
+              <img src="assets/images/TickIcon.png" class="img-responsive CourseIcon" alt="">
+              <span>Software Engineering Studio 1A</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
+        <a href="#">
+          <div class="item courses-info courses-thumb">
+            <div class="courses-author">
+              <img src="assets/images/TickIcon.png" class="img-responsive CourseIcon" alt="">
+              <span>Information System Development Methodologies</span>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
