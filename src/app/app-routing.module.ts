@@ -9,6 +9,7 @@ import { CourseRecommendationsComponent } from './components/Course/course-recom
 import { IndexComponent } from './components/index/index.component';
 import { SubjectEntryComponent } from './components/Subject/subject-entry/subject-entry.component';
 import { SubjectListComponent } from './components/Subject/subject-list/subject-list.component';
+import { UserInterestComponent } from './user-interest/user-interest.component';
 
 const routes: Routes = [
   {
@@ -50,6 +51,11 @@ const routes: Routes = [
     path: 'contactUs',
     pathMatch: 'full',
     component:ContactUsComponent
+  },
+  {
+    path: 'userInterests',
+    pathMatch: 'full',
+    component:UserInterestComponent
   },
   {
     path: '',

@@ -17,6 +17,7 @@ import { FooterComponent } from './components/modules/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './Services/contact.service';
+import { UserInterestComponent } from './user-interest/user-interest.component';
 
 @NgModule({
   declarations: [
@@ -31,13 +32,15 @@ import { ContactService } from './Services/contact.service';
     SubjectEntryComponent,
     SubjectListComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    UserInterestComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     ContactService
