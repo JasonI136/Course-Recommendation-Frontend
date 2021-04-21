@@ -4,11 +4,11 @@
              <div class="row">
                 <div class=" col-md-4 col-sm-12">
                     <div class="entry-form">
-                         <form action="#" method="post">
+                         <form #loginForm="ngForm" (ngSubmit)="submitLogin(loginForm.value)" action="#" method="post">
                               <h2>CourseRec Login</h2>
-                              <input type="text" name="full name" class="form-control" placeholder="UTS Student ID" required="">
+                              <input type="text" ngModel name="full name" class="form-control" placeholder="UTS Student ID" required="">
 
-                              <input type="password" name="password" class="form-control" placeholder="UTS password" required="">
+                              <input type="password" ngModel name="password" class="form-control" placeholder="UTS password" required="">
 
                               <button class="submit-btn form-control" id="form-submit">Sign in</button>
 

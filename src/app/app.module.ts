@@ -17,6 +17,7 @@ import { FooterComponent } from './components/modules/footer/footer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './Services/contact.service';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ContactService } from './Services/contact.service';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [
     ContactService
