@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './Services/contact.service';
 import { UserInterestComponent } from './user-interest/user-interest.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,11 @@ import { UserInterestComponent } from './user-interest/user-interest.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+<<<<<<< .mine
     ReactiveFormsModule,
+=======
+    FormsModule
+>>>>>>> .theirs
   ],
   providers: [
     ContactService
