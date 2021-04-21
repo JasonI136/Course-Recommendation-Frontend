@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-//import querystring from 'querystring';
+import axios from 'axios';
+import querystring from 'querystring';
 
-declare function login(body): void; 
+declare function login(axios, querystring, body): string; 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -16,10 +17,10 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submitLogin(val){
+  async submitLogin(val){
     console.warn(val) //checking login details
-    login(val);
+    const session_id = await login(axios, querystring, val);
 
+    console.log(session_id);
   }
-
 }
