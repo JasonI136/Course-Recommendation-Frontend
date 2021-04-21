@@ -1,8 +1,6 @@
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import axios from 'axios';
-import querystring from 'querystring';
 
-declare function login(axios, querystring, body): string; 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,17 +8,26 @@ declare function login(axios, querystring, body): string;
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { 
+  constructor(private http: HttpClient) {
     
-  }
+   }
 
   ngOnInit(): void {
   }
 
   async submitLogin(val){
-    console.warn(val) //checking login details
-    const session_id = await login(axios, querystring, val);
+    const body = new HttpParams()
+    .set('id', val.id)
+    .set('password', val.password);
 
-    console.log(session_id);
+
+    this.http.post<any>('https://og3xyy24hh.execute-api.ap-southeast-2.amazonaws.com/dev/session', body.toString(), {
+      headers: new HttpHeaders()
+        .set('Content-Type', 'application/x-www-form-urlencoded')
+    }).subscribe(data => {
+      console.log(data);
+    })
+
+    
   }
 }

@@ -41,11 +41,7 @@ import {FormsModule} from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-<<<<<<< .mine
-    ReactiveFormsModule,
-=======
     FormsModule
->>>>>>> .theirs
   ],
   providers: [
     ContactService
