@@ -3,6 +3,10 @@ section {
   padding: 40px 0;
 }
 
+.section-title{
+  text-align: center;
+}
+
 .recommendedSubjecsTitle{
   padding-left:15px;
   color:white;
@@ -47,14 +51,30 @@ section {
 
 }
 
+.courseNumLabel{
+  font-size: 10px;
+}
+
 .courses-thumb {
   background: #f9f9f9;
 }
 
 .courses-thumb:hover {
   background: #29ca8e;
-
 }
+
+.CourseIcon:hover{
+  -moz-transition: all .1s ease-in;
+  -o-transition: all .1s ease-in;
+  -webkit-transition: all .1s ease-in;
+} 
+
+
+#thumbnail:hover + #title {
+	filter:invert();
+}
+
+
 .subjectRecommendationBlock{
   padding-bottom:12px;
 }

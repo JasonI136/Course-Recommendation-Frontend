@@ -26,12 +26,23 @@
 padding: 20px, 20px, 20px, 20px;
 }
 
-
-
 .custom-control-label{
   padding-left: 10px;
 }
 
-.custom-control-input{
-  
+
+.SubmitButton {
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid black;
+  color: #252020;
+  width: 50%;
+  height: 50px;
+  margin: 30px auto;
+  margin-bottom: 10px;
+}
+
+.SubmitButton:hover {
+  background: #3f51b5;
+  color: #ffffff;
 }
