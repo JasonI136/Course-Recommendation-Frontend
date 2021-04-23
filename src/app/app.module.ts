@@ -19,8 +19,16 @@ import { HttpClientModule } from '@angular/common/http';
 import { ContactService } from './Services/contact.service';
 import { UserInterestComponent } from './components/user-interest/user-interest.component';
 import {FormsModule} from '@angular/forms';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatStepperModule} from '@angular/material/stepper';
+
+const material = [
+  MatSliderModule,
+];
 
 @NgModule({
+
+
   declarations: [
     AppComponent,
     RegistrationComponent,
@@ -42,6 +50,8 @@ import {FormsModule} from '@angular/forms';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    MatSliderModule,
+    MatStepperModule
   ],
   providers: [
     ContactService,

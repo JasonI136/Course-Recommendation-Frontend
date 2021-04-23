@@ -13,16 +13,19 @@ section {
 }
 
 .recommended-subjects-container {
-  overflow: scroll;
+  overflow: visible;
   background-color: grey;
   padding-top: 15px;
   border-radius: 12px;
-  float:initial;
+  float: initial;
+  box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+  float: left;
 }
 
 #recommendedName{
   color: white;
   font-size: 15px;
+  font-weight: normal;
   display: inline-block
 }
 
@@ -61,8 +64,14 @@ section {
 
 .courses-thumb:hover {
   background: #29ca8e;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
-
+.courses-thumb:hover img{
+  filter:invert();
+  -moz-transition: all .2s ease-in;
+  -o-transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-in;
+}
 .CourseIcon:hover{
   -moz-transition: all .1s ease-in;
   -o-transition: all .1s ease-in;
@@ -89,11 +98,13 @@ section {
 }
 
 .completed-subjects-container {
-  overflow: scroll;
+  overflow: visible;
   background-color: #252020;
   padding-top: 15px;
   border-radius: 12px;
   float:initial;
+  box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+  float: left;
 }
 
 .completedSubjectsTitle{
