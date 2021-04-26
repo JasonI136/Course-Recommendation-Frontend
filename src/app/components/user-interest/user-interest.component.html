@@ -98,10 +98,43 @@
                             </ul>
                         </div>
                     </div>
+                    <div>
+                    <div class="example-container">
+                        <h2 class="h4 mb-1">Please Drag Your Interest Keywords Into The Selected List</h2>
 
+                        <div
+                          cdkDropList
+                          #todoList="cdkDropList"
+                          [cdkDropListData]="todo"
+                          [cdkDropListConnectedTo]="[doneList]"
+                          class="example-list"
+                          (cdkDropListDropped)="drop($event)">
+                          <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                        </div>
+                        <button class="btn btn-success pull-right"> Refresh</button>
+                      </div>
+                      
+                      <div class="example-container">
+                        
+
+                        <h2>Selected Keywords</h2>
+                      
+                        <div
+                          cdkDropList
+                          #doneList="cdkDropList"
+                          [cdkDropListData]="done"
+                          [cdkDropListConnectedTo]="[todoList]"
+                          class="example-list"
+                          (cdkDropListDropped)="drop($event)">
+                          <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                        </div>
+                      </div>
+                    </div>
                     <button class="submit-btn form-control SubmitButton" id="form-submit">Submit Interests</button>
                 </div>
             </div>
         </form>
     </div>
 </section>
+
+  

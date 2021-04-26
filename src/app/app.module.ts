@@ -21,6 +21,7 @@ import { UserInterestComponent } from './components/user-interest/user-interest.
 import {FormsModule} from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatStepperModule} from '@angular/material/stepper';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 const material = [
   MatSliderModule,
@@ -51,7 +52,8 @@ const material = [
     HttpClientModule,
     FormsModule,
     MatSliderModule,
-    MatStepperModule
+    MatStepperModule,
+    DragDropModule
   ],
   providers: [
     ContactService,
