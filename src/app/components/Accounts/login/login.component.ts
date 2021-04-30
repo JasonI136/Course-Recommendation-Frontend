@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ISession } from 'src/app/Models/ISession';
 import { Session } from 'src/app/Models/SessionModel';
 
@@ -10,7 +11,8 @@ import { Session } from 'src/app/Models/SessionModel';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient,
+              private route: Router) {
     
    }
 
@@ -26,10 +28,16 @@ export class LoginComponent implements OnInit {
     this.http.post<ISession>('https://og3xyy24hh.execute-api.ap-southeast-2.amazonaws.com/dev/session', body.toString(), {
       headers: new HttpHeaders()
         .set('Content-Type', 'application/x-www-form-urlencoded')
-    }).subscribe(data => {
+    }).subscribe(
+      data => {
       console.log(data);
       Session.id = data.session_id;
-    })
+      this.route.navigate(['/userPage']);
+      },
+      error => {
+        alert("Invalid UTS ID or Password");
+      }
+    )
 
     
     

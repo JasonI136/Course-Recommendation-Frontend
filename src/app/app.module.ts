@@ -22,6 +22,7 @@ import {FormsModule} from '@angular/forms';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatStepperModule} from '@angular/material/stepper';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { UserPageComponent } from './components/user-page/user-page.component';
 
 const material = [
   MatSliderModule,
@@ -43,7 +44,8 @@ const material = [
     SubjectListComponent,
     NavbarComponent,
     FooterComponent,
-    UserInterestComponent
+    UserInterestComponent,
+    UserPageComponent
   ],
   imports: [
     BrowserModule,

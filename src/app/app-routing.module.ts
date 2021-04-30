@@ -10,6 +10,7 @@ import { IndexComponent } from './components/index/index.component';
 import { SubjectEntryComponent } from './components/Subject/subject-entry/subject-entry.component';
 import { SubjectListComponent } from './components/Subject/subject-list/subject-list.component';
 import { UserInterestComponent } from './components/user-interest/user-interest.component';
+import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserAuthenticationGuard } from './Guards/user-authentication.guard';
 
 const routes: Routes = [
@@ -58,6 +59,11 @@ const routes: Routes = [
     path: 'userInterests',
     pathMatch: 'full',
     component:UserInterestComponent
+  },
+  {
+    path: 'userPage',
+    pathMatch: 'full',
+    component:UserPageComponent
   },
   {
     path: '',
