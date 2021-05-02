@@ -9,10 +9,29 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 })
 export class UserInterestComponent implements OnInit {
 
+   public show:boolean = false;
+  public buttonName:any = 'Begin Questionnare';
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  clickMethod(name: string) {
+    if(confirm("Are you sure you want to refresh the Keyword List")) {
+      console.log("Implement delete functionality here");
+    }
+  }
+
+  toggle() {
+    this.show = !this.show;
+
+    if(this.show)  
+      this.buttonName = "Hide";
+    else
+      this.buttonName = "Begin Questionnare";
+  }
+
   todo = [
     'Key Word 1',
     'Key Word 2',
@@ -37,4 +56,5 @@ export class UserInterestComponent implements OnInit {
                         event.currentIndex);
     }
   }
+  
 }

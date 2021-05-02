@@ -12,6 +12,13 @@
   scrollbar-color: lightgrey;
 }
 
+.list-group {
+    padding-left: 0;
+    margin-bottom: 20px;
+      box-shadow: rgb(38 57 77) 0px 20px 30px -226px;
+}
+
+
 .recommended-subjects {
   height: 300px;
   width: 350px;
@@ -55,7 +62,7 @@ padding: 20px, 20px, 20px, 20px;
 }
 
 .example-list {
-  border: solid 1px #ccc;
+  border: solid 1px #777;
   min-height: 60px;
   background: white;
   border-radius: 4px;
@@ -63,9 +70,19 @@ padding: 20px, 20px, 20px, 20px;
   display: block;
 }
 
+.example-list-chosen{
+  border: solid 3px #29ca8e;
+  min-height: 60px;
+  background: white;
+  border-radius: 4px;
+  overflow: hidden;
+  display: block;
+  box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+}
+
 .example-box {
   padding: 10px 10px;
-  border-bottom: solid 1px #ccc;
+  border-bottom: solid 3px #ccc;
   color: rgba(0, 0, 0, 0.87);
   display: flex;
   flex-direction: row;
@@ -99,4 +116,35 @@ padding: 20px, 20px, 20px, 20px;
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.InterestsHeaders{
+  text-align:center;
+  color: #29ca8e;
+}
+
+.InterestsHeaders-alt{
+  text-align:center;
+  color: grey;
+}
+
+.centreText{
+  text-align:center;
+}
+
+.resetButton{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  width: 30%;
+
+}
+
+.hidden{
+    display:none;
+}
+
+.unhidden{
+    display:block;
 }
