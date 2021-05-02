@@ -6,8 +6,7 @@ export class User {
     sName: string;
     password: string;
     age: number;
-    fullTimePreferred: boolean;
+    fullTimePreferred: number;
     completedSubjects: string; 
-    // Double check if CompletedSubjects is a string
     degree_id: string;
 }

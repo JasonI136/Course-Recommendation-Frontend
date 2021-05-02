@@ -8,7 +8,7 @@
 
             <div class="col-md-12 col-sm-12">
                 <div class="section-title">
-                    <h2>Welcome firstname lastname<small>UTS ID: 12345678</small></h2>
+                    <h2>Welcome {{studentDetails.fName}} {{studentDetails.sName}}<small>UTS ID: {{studentDetails.student_id}}</small></h2>
                 </div>
             </div>
 
@@ -23,8 +23,8 @@
                             <img src="assets/images/person.png" class="img-responsive" alt="">
                         </div>
                         <div class="team-info">
-                            <h3>FirstName LastName</h3>
-                            <span>Course: Bachelors Degree</span>
+                            <h3>{{studentDetails.fName}} {{studentDetails.sName}}</h3>
+                            <span>Degree ID: {{studentDetails.degree_id}}</span>
                         </div>
                     </div>
                 </div>
