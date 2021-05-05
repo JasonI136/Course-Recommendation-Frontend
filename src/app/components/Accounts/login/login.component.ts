@@ -1,8 +1,10 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { ISession } from 'src/app/Models/ISession';
 import { Session } from 'src/app/Models/SessionModel';
+import { Cookie } from 'universal-cookie';
 
 @Component({
   selector: 'app-login',
@@ -10,9 +12,11 @@ import { Session } from 'src/app/Models/SessionModel';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  cookieValue: String;
 
   constructor(private http: HttpClient,
-              private route: Router) {
+              private route: Router,
+              private cookieService: CookieService) {
     
    }
 
@@ -32,6 +36,10 @@ export class LoginComponent implements OnInit {
       data => {
       console.log(data);
       Session.id = data.session_id;
+      this.cookieService.set( 'session_id', data.session_id );
+
+      this.cookieValue = this.cookieService.get('session_id');
+      
       this.route.navigate(['/userPage']);
       },
       error => {

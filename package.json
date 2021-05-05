@@ -23,10 +23,13 @@
     "@angular/platform-browser": "~11.2.7",
     "@angular/platform-browser-dynamic": "~11.2.7",
     "@angular/router": "~11.2.7",
+    "angular-cookies": "^1.8.2",
     "axios": "^0.21.1",
+    "ngx-cookie-service": "^11.0.2",
     "rxjs": "~6.6.0",
     "save": "^2.4.0",
     "tslib": "^2.0.0",
+    "universal-cookie": "^4.0.4",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

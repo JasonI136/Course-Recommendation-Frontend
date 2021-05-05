@@ -23,6 +23,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import {MatStepperModule} from '@angular/material/stepper';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import { UserPageComponent } from './components/user-page/user-page.component';
+import { CookieService } from 'ngx-cookie-service';
 
 const material = [
   MatSliderModule,
@@ -59,7 +60,8 @@ const material = [
   ],
   providers: [
     ContactService,
-    Title
+    Title,
+    CookieService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { ISession } from 'src/app/Models/ISession';
 import { Session } from 'src/app/Models/SessionModel';
 import { User } from 'src/app/Models/UserModel';
@@ -17,9 +18,12 @@ export class UserPageComponent implements OnInit {
   getStudentDetailsURL: String;
 
   constructor(private http: HttpClient,
-              private route: Router) { }
+              private route: Router,
+              private cookieService: CookieService) { }
 
   ngOnInit(): void {
+    
+
     this.session = Session.id;
     const body = new HttpParams()
     let getStudentDetailsURL = "https://og3xyy24hh.execute-api.ap-southeast-2.amazonaws.com/dev/student/" + this.session;
@@ -29,6 +33,7 @@ export class UserPageComponent implements OnInit {
     }).subscribe(
       data => {
       console.log(data);
+      
       this.studentDetails = data;
       },
     )

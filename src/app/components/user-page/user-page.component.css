@@ -100,3 +100,38 @@ padding: 20px, 20px, 20px, 20px;
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
   transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
+
+.team-image img{
+  width: 45%;
+  position: absolute;
+  top: 15px;
+  left: 55%;
+  
+}
+
+.utsID{
+  margin-top: -80px;
+}
+
+.utsLogo{
+  width: 17%;
+  position: absolute;
+  top: 5px;
+  left: 6%;
+}
+
+.team-thumb{
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+
+.continueLabel{
+  padding-top:25px;
+}
+
+.section-title{
+  padding-bottom:10px;
+}
+
+.userPageSection {
+  padding: 40px 0;
+}
