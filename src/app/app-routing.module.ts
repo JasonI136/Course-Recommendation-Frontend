@@ -13,6 +13,7 @@ import { UserInterestComponent } from './components/user-interest/user-interest.
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { UserAuthenticationGuard } from './Guards/user-authentication.guard';
 
+
 const routes: Routes = [
   {
     path: 'accounts/registration',
