@@ -12,13 +12,6 @@
   scrollbar-color: lightgrey;
 }
 
-.list-group {
-    padding-left: 0;
-    margin-bottom: 20px;
-      box-shadow: rgb(38 57 77) 0px 20px 30px -226px;
-}
-
-
 .recommended-subjects {
   height: 300px;
   width: 350px;
