@@ -56,5 +56,36 @@ export class UserInterestComponent implements OnInit {
                         event.currentIndex);
     }
   }
-  
+  items = [ // maybe move this to a new place where we store static data (e.g key words)
+    {
+      assessment:'Projects',
+    },
+    {
+      assessment:'Laboratory/Practical',
+    },
+    {
+      assessment:'Quiz/Test',
+    },
+    {
+      assessment:'Examination',
+    },
+    {
+      assessment:'Report',
+    },
+    {
+      assessment:'Excerises',
+    },
+    {
+      assessment:'Case Study',
+    },
+    {
+      assessment:'Presentation',
+    },
+    {
+      assessment:'Demonstration',
+    },
+    {
+      assessment:'Indifferent',
+    }
+  ];
 }

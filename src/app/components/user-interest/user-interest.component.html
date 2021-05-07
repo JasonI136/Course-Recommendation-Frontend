@@ -32,72 +32,19 @@
                             <h2 class="h4 mb-1">1. What kind of assessment types do you enjoy?</h2>
                             <p class="small text-muted font-italic mb-4">Multiple selections allowed</p>
                             <ul class="list-group">
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck1" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck1">Projects</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck2" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck2">Laboratory/Practical</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck3" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck3">Quiz/Test</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck4" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck4">Examination</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item rounded-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck5" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck5">Report</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item rounded-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck6" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck6">Excerises</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item rounded-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck7" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck7">Case Study</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item rounded-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck8" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck8">Presentation</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item rounded-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck9" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck9">Demonstration</label>
-                                    </div>
-                                </li>
-                                <li class="list-group-item rounded-0">
-                                    <div class="custom-control custom-checkbox">
-                                        <input class="custom-control-input" id="customCheck10" type="checkbox">
-                                        <label class="custom-control-label" for="customCheck10">Indifferent</label>
-                                    </div>
-                                </li>
+                                    <li class="list-group-item" for="{{i}}" *ngFor="let item of items;let i =index">
+                                        <div class = "card" id="cardtest">
+                                            <div class="custom-control custom-checkbox">
+                                                <input class="custom-control-input" type="checkbox" id="{{i}}" [value]="item" (change)="onchange()"/>
+                                                <label class="custom-control-label" for="customCheck1">{{item.assessment}}</label>
+                                            </div>
+                                        </div>
+                                    </li>
                             </ul>
                         </div>
                     </div>
-
+                    <input class="custom-control-input" type="checkbox" id="test" [value]="item" (change)="onchange()"/>
                     <hr>
-
                     <div class="card shadow border-0 mb-5">
                         <div class="card-body p-5">
                             <h2 class="h4 mb-1">2. Do you enjoy working in a group?</h2>
@@ -160,6 +107,8 @@
             </div>
         </form>
     </div>
+    
+    
 </section>
 
   
@@ -177,3 +126,4 @@
         }
     }}
 </script>
+

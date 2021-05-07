@@ -1,25 +1,32 @@
 #formcontainer{
-    width: 650px;
-    margin: 0 auto;
+  width: 650px;
+  margin: 0 auto;
 }
 .completed-subjects {
-  height: 300px;
-  width: 350px;
-  overflow: scroll;
-  background-color: #EDEDED;
-  padding: 10px;
-  float: left;
-  scrollbar-color: lightgrey;
+height: 300px;
+width: 350px;
+overflow: scroll;
+background-color: #EDEDED;
+padding: 10px;
+float: left;
+scrollbar-color: lightgrey;
 }
 
+.list-group {
+  padding-left: 0;
+  margin-bottom: 20px;
+    box-shadow: rgb(38 57 77) 0px 20px 30px -226px;
+}
+
+
 .recommended-subjects {
-  height: 300px;
-  width: 350px;
-  overflow: scroll;
-  background-color: #EDEDED;
-  padding: 10px;
-  float: right;
-  scrollbar-color: lightgrey;
+height: 300px;
+width: 350px;
+overflow: scroll;
+background-color: #EDEDED;
+padding: 10px;
+float: right;
+scrollbar-color: lightgrey;
 }
 
 .column1 {
@@ -27,120 +34,121 @@ padding: 20px, 20px, 20px, 20px;
 }
 
 .custom-control-label{
-  padding-left: 10px;
+padding-left: 10px;
 }
 
 
 .SubmitButton {
-  background: transparent;
-  border-radius: 50px;
-  border: 1px solid black;
-  color: #252020;
-  width: 50%;
-  height: 50px;
-  margin: 30px auto;
-  margin-bottom: 10px;
+background: transparent;
+border-radius: 50px;
+border: 1px solid black;
+color: #252020;
+width: 50%;
+height: 50px;
+margin: 30px auto;
+margin-bottom: 10px;
 }
 
 .SubmitButton:hover {
-  background: #3f51b5;
-  color: #ffffff;
+background: #3f51b5;
+color: #ffffff;
 }
 .example-container {
-  width: 650px;
-  max-width: 100%;
-  margin: 0 25px 25px 0;
-  display: inline-block;
-  vertical-align: top;
+width: 650px;
+max-width: 100%;
+margin: 0 25px 25px 0;
+display: inline-block;
+vertical-align: top;
 }
 
 .example-list {
-  border: solid 1px #777;
-  min-height: 60px;
-  background: white;
-  border-radius: 4px;
-  overflow: hidden;
-  display: block;
+border: solid 1px #777;
+min-height: 60px;
+background: white;
+border-radius: 4px;
+overflow: hidden;
+display: block;
 }
 
 .example-list-chosen{
-  border: solid 3px #29ca8e;
-  min-height: 60px;
-  background: white;
-  border-radius: 4px;
-  overflow: hidden;
-  display: block;
-  box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
+border: solid 3px #29ca8e;
+min-height: 60px;
+background: white;
+border-radius: 4px;
+overflow: hidden;
+display: block;
+box-shadow: rgb(38 57 77) 0px 20px 30px -10px;
 }
 
 .example-box {
-  padding: 10px 10px;
-  border-bottom: solid 3px #ccc;
-  color: rgba(0, 0, 0, 0.87);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  cursor: move;
-  background: white;
-  font-size: 14px;
+padding: 10px 10px;
+border-bottom: solid 3px #ccc;
+color: rgba(0, 0, 0, 0.87);
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: space-between;
+box-sizing: border-box;
+cursor: move;
+background: white;
+font-size: 14px;
 }
 
 .cdk-drag-preview {
-  box-sizing: border-box;
-  border-radius: 4px;
-  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
-              0 8px 10px 1px rgba(0, 0, 0, 0.14),
-              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+box-sizing: border-box;
+border-radius: 4px;
+box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+            0 8px 10px 1px rgba(0, 0, 0, 0.14),
+            0 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 
 .cdk-drag-placeholder {
-  opacity: 0;
+opacity: 0;
 }
 
 .cdk-drag-animating {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .example-box:last-child {
-  border: none;
+border: none;
 }
 
 .example-list.cdk-drop-list-dragging .example-box:not(.cdk-drag-placeholder) {
-  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
 }
 
 .InterestsHeaders{
-  text-align:center;
-  color: #29ca8e;
+text-align:center;
+color: #29ca8e;
 }
 
 .InterestsHeaders-alt{
-  text-align:center;
-  color: grey;
+text-align:center;
+color: grey;
 }
 
 .centreText{
-  text-align:center;
+text-align:center;
 }
 
 .resetButton{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 10px;
-  width: 30%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top: 10px;
+width: 30%;
 
 }
 
 .hidden{
-    display:none;
+  display:none;
 }
 
 .unhidden{
-    display:block;
+  display:block;
 }
 
-
-/* CHECKBOXES */
+input[type=checkbox]:checked + label.custom-control-label{
+    color:#29ca8e;
+  }
