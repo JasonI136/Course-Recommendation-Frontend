@@ -1,9 +1,12 @@
 <body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
     <app-navbar></app-navbar>
 
-    <router-outlet></router-outlet>
 
-    <app-footer></app-footer>
+    <main [@routeAnimations]="prepareRoute(outlet)" class="content">
+        <router-outlet #outlet = "outlet"></router-outlet>
+    </main>
+
+<app-footer></app-footer>
            
     
     <!-- SCRIPTS -->
