@@ -2,11 +2,11 @@
     <app-navbar></app-navbar>
 
 
-    <main [@routeAnimations]="prepareRoute(outlet)" class="content">
+    <main [@routeAnimations]="prepareRoute(outlet)" class="content" style='min-height: 95vh'>
         <router-outlet #outlet = "outlet"></router-outlet>
     </main>
+    <app-footer></app-footer>
 
-<app-footer></app-footer>
            
     
     <!-- SCRIPTS -->

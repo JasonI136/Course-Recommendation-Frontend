@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { fader } from './app.route-animations';
+import { slider} from './app.route-animations';
 
 
 @Component({
@@ -8,7 +8,7 @@ import { fader } from './app.route-animations';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
   animations: [
-    fader
+    slider
   ]
 })
 export class AppComponent {
