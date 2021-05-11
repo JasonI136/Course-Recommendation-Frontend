@@ -18,58 +18,70 @@ const routes: Routes = [
   {
     path: 'accounts/registration',
     pathMatch: 'full',
-    component:RegistrationComponent
+    component:RegistrationComponent,
+    data : { animation : 'isRegistration'}
   },
   {
     path: 'accounts/login',
     pathMatch: 'full',
-    component:LoginComponent
+    component:LoginComponent,
+    data : { animation : 'isLogin'}
+    
   },
   {
     path: 'subject/subjectEntry',
     pathMatch: 'full',
-    component:SubjectEntryComponent
+    component:SubjectEntryComponent,
+    data : { animation : 'isSubjectEntry'}
   },
   {
     path: 'subject/subjectList',
     pathMatch: 'full',
-    component:SubjectListComponent
+    component:SubjectListComponent,
+    data : { animation : 'isSubjectList'}
   },
   {
     path: 'course/courseAreas',
     pathMatch: 'full',
-    component:CourseAreasComponent
+    component:CourseAreasComponent,
+    data : { animation : 'isCourseAreas'}
   },
   {
     path: 'course/courseList',
     pathMatch: 'full',
-    component:CourseListComponent
+    component:CourseListComponent,
+    data : { animation : 'isCourseList'}
   },
   {
     path: 'course/courseRecommendations',
     pathMatch: 'full',
     component:CourseRecommendationsComponent,
-    canActivate: [UserAuthenticationGuard]
+    canActivate: [UserAuthenticationGuard],
+    data : { animation : 'isCourseRecommendations'}
   },
   {
     path: 'contactUs',
     pathMatch: 'full',
-    component:ContactUsComponent
+    component:ContactUsComponent,
+    data : { animation : 'isContactUs'}
   },
   {
     path: 'userInterests',
     pathMatch: 'full',
-    component:UserInterestComponent
+    component:UserInterestComponent,
+    data : { animation : 'isUserInterests'}
   },
   {
     path: 'userPage',
     pathMatch: 'full',
-    component:UserPageComponent
+    component:UserPageComponent,
+    data : { animation : 'isUserPage'}
   },
   {
     path: '',
     pathMatch: 'full',
-    component: IndexComponent
+    component: IndexComponent,
+    data : { animation : 'isHome'}
   }
 
 ];
