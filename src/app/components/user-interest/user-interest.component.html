@@ -31,7 +31,7 @@
                                     <li class="list-group-item" for="{{i}}" *ngFor="let item of items;let i =index">
                                         <div class = "card" id="cardtest">
                                             <div class="custom-control custom-checkbox">
-                                                <input class="custom-control-input" type="checkbox" id="{{i}}" [value]="item" (change)="onchange()"/>
+                                                <input class="custom-control-input" type="checkbox" id="{{i}}" [value]="item" />
                                                 <label class="custom-control-label" for="customCheck1">{{item.assessment}}</label>
                                             </div>
                                         </div>
@@ -39,7 +39,7 @@
                             </ul>
                         </div>
                     </div>
-                    <input class="custom-control-input" type="checkbox" id="test" [value]="item" (change)="onchange()"/>
+                    
                     <hr>
                     <div class="card shadow border-0 mb-5">
                         <div class="card-body p-5">

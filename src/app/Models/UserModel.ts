@@ -9,4 +9,5 @@ export class User {
     fullTimePreferred: number;
     completedSubjects: string; 
     degree_id: string;
+    courseName: string;
 }

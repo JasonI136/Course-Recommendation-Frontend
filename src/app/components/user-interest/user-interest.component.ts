@@ -112,4 +112,6 @@ export class UserInterestComponent implements OnInit {
       assessment:'Indifferent',
     }
   ];
+
+ 
 }

@@ -14,24 +14,25 @@ export class NavbarComponent implements OnInit {
   session: String;
   studentDetails: User;
   getStudentDetailsURL: String;
+  
 
   constructor(private http: HttpClient,
-              private route: Router) { }
+              private route: Router,
+              ) {
+                this.studentDetails = new User();
+                this.studentDetails.fName = "";
+                this.studentDetails.sName = "";
+               }
 
   ngOnInit(): void {
-    this.session = Session.id;
-    const body = new HttpParams()
-    let getStudentDetailsURL = "https://og3xyy24hh.execute-api.ap-southeast-2.amazonaws.com/dev/student/" + this.session;
-    this.http.get<User>(getStudentDetailsURL, {
-      headers: new HttpHeaders()
-        .set('Content-Type', 'application/x-www-form-urlencoded')
-    }).subscribe(
-      data => {
-      console.log(data);
-      this.studentDetails = data;
-      },
-    )
   }
-  // END OF GETTING STUDENT DETAILS //
+
+  navbarGetStudentData(){
+    if(Session.id !== undefined){
+      this.studentDetails.fName = Session.fName;
+      this.studentDetails.sName = Session.sName;
+    }
+  }
+
 
 }
