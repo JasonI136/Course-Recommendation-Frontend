@@ -45,7 +45,10 @@ export class NavbarComponent implements OnInit {
 
   clickMethod(name: string) {
     if(confirm("Are you sure you want to Sign Out?")) {
+      window.location.reload();
+      alert("User has successfully logged out");
       console.log("User has logged out of current session");
+      this.route.navigate(['']);
     }
   }
 

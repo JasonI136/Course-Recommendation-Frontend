@@ -26,10 +26,9 @@
                         </div>
                         <div class="team-info">
                             <h3>{{studentDetails.fName}} {{studentDetails.sName}}
-                                <small>
-                                    Student ID: {{studentDetails.student_id}}
-                                </small>
+
                             </h3>
+                            <span>Student ID: {{studentDetails.student_id}}</span><br>
                             <span>Degree ID: {{studentDetails.degree_id}}</span><br>
                             
                         </div>
@@ -52,6 +51,27 @@
     </div>
 </section>
 
+
+<!-- FEATURE -->
+<section id="feature">
+    <div class="container">
+         <div class="row">
+              <div class="col-md-6 col-sm-6">
+                   <div class="feature-thumb">
+                        <h3>Your Course:</h3>
+                        <p>{{studentDetails.courseName}}</p>
+                   </div>
+              </div>
+
+              <div class="col-md-6 col-sm-6">
+                   <div class="feature-thumb">
+                        <h3>Degree Id:</h3>
+                        <h4>{{studentDetails.degree_id}}</h4>
+                   </div>
+              </div>
+         </div>
+    </div>
+</section>
 <!-- 
     WELCOME PAGE
 SHOW STUDENT DETAILS AND SETUP THE SESSION ID 

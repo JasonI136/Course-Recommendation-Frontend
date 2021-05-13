@@ -40,8 +40,9 @@
 
               <ul class="NavbarAligned nav navbar-nav navbar-right">
                 <li><a routerLink='accounts/login' class="smoothScroll" *ngIf="!isUserLoggedIn">UTS Login</a></li>
-                <li><a href='' class="smoothScroll" *ngIf="isUserLoggedIn" (click)="clickMethod('name')">Sign out</a></li>
+                <li><a routerLink='userPage' class="smoothScroll" *ngIf="isUserLoggedIn"><i class="fa fa-user"></i>Account</a></li>
                 <li><a routerLink='contactUs' class="smoothScroll"><i class="fa fa-phone"></i>Contact Us</a></li>
+                <li><a class="smoothScroll" *ngIf="isUserLoggedIn" (click)="clickMethod('name')">Sign out</a></li>
               </ul>
 
               
