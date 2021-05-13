@@ -25,6 +25,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
 import { UserPageComponent } from './components/user-page/user-page.component';
 import { CookieService } from 'ngx-cookie-service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DataSharingService } from './Services/data-sharing.service';
 
 const material = [
   MatSliderModule,
@@ -63,7 +64,8 @@ const material = [
   providers: [
     ContactService,
     Title,
-    CookieService
+    CookieService,
+    DataSharingService,
   ],
   bootstrap: [AppComponent]
 })

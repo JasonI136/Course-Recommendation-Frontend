@@ -5,6 +5,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { ISession } from 'src/app/Models/ISession';
 import { Session } from 'src/app/Models/SessionModel';
 import { User } from 'src/app/Models/UserModel';
+import { DataSharingService } from 'src/app/Services/data-sharing.service';
 import { Cookie } from 'universal-cookie';
 
 @Component({
@@ -14,11 +15,18 @@ import { Cookie } from 'universal-cookie';
 })
 export class LoginComponent implements OnInit {
   cookieValue: String;
+  isUserLoggedIn: boolean;
 
   constructor(private http: HttpClient,
               private route: Router,
-              private cookieService: CookieService) {
+              private cookieService: CookieService,
+              private dataSharingService: DataSharingService) {
     
+        // Subscribe here, this will automatically update 
+        // "isUserLoggedIn" whenever a change to the subject is made.
+        this.dataSharingService.isUserLoggedIn.subscribe( value => {
+          this.isUserLoggedIn = value;
+      });
    }
 
   ngOnInit(): void {
@@ -52,6 +60,7 @@ export class LoginComponent implements OnInit {
             Session.student_id = data.student_id;
             Session.degree_id = data.degree_id;
             Session.courseName = data.courseName;
+            this.dataSharingService.isUserLoggedIn.next(true);
             this.route.navigate(['/userPage']);
           }
         )
