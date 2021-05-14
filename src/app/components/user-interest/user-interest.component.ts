@@ -30,7 +30,7 @@ import {
 export class UserInterestComponent implements OnInit {
 
   public show:boolean = false;
-  public buttonName:any = 'Begin Questionnare';
+  public buttonName:any = 'Begin Questionnaire';
 
   constructor() { }
 
@@ -80,38 +80,60 @@ export class UserInterestComponent implements OnInit {
                         event.currentIndex);
     }
   }
-  items = [ // maybe move this to a new place where we store static data (e.g key words)
+  itemsLeft = [ // maybe move this to a new place where we store static data (e.g key words)
     {
-      assessment:'Projects',
-    },
-    {
-      assessment:'Laboratory/Practical',
-    },
-    {
-      assessment:'Quiz/Test',
-    },
-    {
-      assessment:'Examination',
-    },
-    {
-      assessment:'Report',
-    },
-    {
-      assessment:'Excerises',
-    },
-    {
-      assessment:'Case Study',
-    },
-    {
-      assessment:'Presentation',
+      assessment:'Exercises',
     },
     {
       assessment:'Demonstration',
     },
     {
-      assessment:'Indifferent',
+      assessment:'Literature review',
+    },
+    {
+      assessment:'Design/drawing/plan/sketch',
+    },
+    {
+      assessment:'Reflection',
+    },
+    {
+      assessment:'Presentation',
+    },
+    {
+      assessment:'Portfolio',
+    },
+    {
+      assessment:'Exam',
+    },
+    {
+      assessment:'Case study',
     }
   ];
-
+  itemsRight = [ // maybe move this to a new place where we store static data (e.g key words)
+    {
+      assessment:'Laboratory/practical',
+    },
+    {
+      assessment:'Report',
+    },
+    {
+      assessment:'Project',
+    },
+    {
+      assessment:'Mid-session examination',
+    },
+    {
+      assessment:'Journal',
+    },
+    {
+      assessment:'Essay',
+    },
+    {
+      assessment:'Examination',
+    },
+    {
+      assessment:'Quiz/test',
+    }
+  ];
  
 }

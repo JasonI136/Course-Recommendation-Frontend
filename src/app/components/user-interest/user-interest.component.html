@@ -4,7 +4,7 @@
 <section *ngIf="!show">
     <div class="container">
         <h2 class="InterestsHeaders">Making your course recommendation</h2>
-        <p class="small text-muted font-italic mb-4 centreText">Simply complete the questionarre and our system will calculate suitable subjects for you</p>
+        <p class="small text-muted font-italic mb-4 centreText">Simply complete the questionnaire and our system will calculate suitable subjects for you</p>
         
         <button (click)="toggle()" id="bt" class="submit-btn form-control SubmitButton">
             {{buttonName}}
@@ -27,8 +27,8 @@
                         <div class="card-body p-5">
                             <h2 class="h4 mb-1">1. What kind of assessment types do you enjoy?</h2>
                             <p class="small text-muted font-italic mb-4">Multiple selections allowed</p>
-                            <ul class="list-group">
-                                    <li class="list-group-item" for="{{i}}" *ngFor="let item of items;let i =index">
+                            <ul class="list-group" style="width:50%; float:left">
+                                    <li class="list-group-item" for="{{i}}" *ngFor="let item of itemsLeft;let i =index">
                                         <div class = "card" id="cardtest">
                                             <div class="custom-control custom-checkbox">
                                                 <input class="custom-control-input" type="checkbox" id="{{i}}" [value]="item" />
@@ -37,6 +37,19 @@
                                         </div>
                                     </li>
                             </ul>
+                            <ul class="list-group" style="width:50%; float:right">
+                                <li class="list-group-item" for="{{i}}" *ngFor="let item of itemsRight;let i =index">
+                                    <div class = "card" id="cardtest">
+                                        <div class="custom-control custom-checkbox">
+                                            <input class="custom-control-input" type="checkbox" id="{{i}}" [value]="item" />
+                                            <label class="custom-control-label" for="customCheck1">{{item.assessment}}</label>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" style="height:50px" >
+                                    <div class = "card" id="cardtest"></div>
+                                </li>
+                        </ul>
                         </div>
                     </div>
                     
