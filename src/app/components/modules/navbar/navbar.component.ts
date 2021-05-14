@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { Session } from 'src/app/Models/SessionModel';
 import { User } from 'src/app/Models/UserModel';
 import { DataSharingService } from 'src/app/Services/data-sharing.service';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-navbar',
@@ -16,11 +17,19 @@ export class NavbarComponent implements OnInit {
   studentDetails: User;
   getStudentDetailsURL: String;
   isUserLoggedIn: boolean;
+  currRoute: String; 
   
-
+  //routing options
+  isHome : boolean;
+  isCourseRecommendations : boolean;
+  isUserInterests : boolean; 
+  isContactUs : boolean; 
+  isLogin : boolean; 
+  
   constructor(private http: HttpClient,
               private route: Router,
-              private dataSharingService: DataSharingService
+              private dataSharingService: DataSharingService,
+              location: Location
               ) {
                 // Subscribe here, this will automatically update 
                 // "isUserLoggedIn" whenever a change to the subject is made.
@@ -31,6 +40,24 @@ export class NavbarComponent implements OnInit {
                 this.studentDetails = new User();
                 this.studentDetails.fName = "";
                 this.studentDetails.sName = "";
+
+                //subscrpiton to the router 
+                route.events.subscribe(val => {
+                  if(location.path() != "" ){
+                    this.currRoute = location.path();
+                  }else{
+                    this.currRoute = "home"; 
+                  }
+                  var splitted = this.currRoute.split("/");
+                  this.isHome = (splitted[splitted.length - 1 ] == "home");
+                  this.isCourseRecommendations = (splitted[splitted.length - 1 ] == "courseRecommendations");
+                  this.isUserInterests = (splitted[splitted.length - 1 ] == "userInterests");
+                  this.isContactUs = (splitted[splitted.length - 1 ] == "contactUs");
+                  this.isLogin = (splitted[splitted.length - 1 ] == "login"); 
+
+                  
+                  
+                })
                }
 
   ngOnInit(): void {
@@ -51,5 +78,7 @@ export class NavbarComponent implements OnInit {
       this.route.navigate(['']);
     }
   }
+
+
 
 }

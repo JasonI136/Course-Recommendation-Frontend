@@ -30,7 +30,7 @@ import {
 export class UserInterestComponent implements OnInit {
 
   public show:boolean = false;
-  public buttonName:any = 'Begin Questionnare';
+  public buttonName:any = 'Begin Questionnaire';
 
   constructor() { }
 
