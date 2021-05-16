@@ -1,24 +1,21 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree } from '@angular/router';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, Router} from '@angular/router';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserAuthenticationGuard implements CanActivate {
-  sessionId: string = '';
-
+  constructor( private cookieService: CookieService, private router: Router) {}
   canActivate()
   {
-    //const isStudent = false; // Setting this to true will allow access to all routes/pages
-    const isStudent = true;
-
-    if(isStudent){
+    const cookieValue = this.cookieService.get('session_id');
+    if(cookieValue){
       return true;
     }
     else{
-      return false;
+      this.router.navigate(['accounts/login']);
     }
   }
-  
 }
