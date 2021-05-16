@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
-
 import { 
   trigger,
   state,
@@ -8,7 +7,7 @@ import {
   animate,
   transition
 } from '@angular/animations';
-
+import * as data from 'src/assets/json/keywords.json';
 
 @Component({
   selector: 'app-user-interest',
@@ -28,7 +27,6 @@ import {
   ]
 })
 export class UserInterestComponent implements OnInit {
-
   public show:boolean = false;
   public buttonName:any = 'Begin Questionnaire';
   assignment_array: any = { "assignment_types": [] };
@@ -36,11 +34,22 @@ export class UserInterestComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
+
   }
 
   clickMethod(name: string) {
     if(confirm("Are you sure you want to refresh the Keyword List")) {
-      console.log("Implement delete functionality here");
+      this.todo = [
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+        data.keywords[this.getRandomInt()],
+      ];
     }
   }
 
@@ -56,21 +65,24 @@ export class UserInterestComponent implements OnInit {
     else
       this.buttonName = "Begin Questionnare";*/
   }
-
+  
   todo = [
-    'Key Word 1',
-    'Key Word 2',
-    'Key Word 3',
-    'Key Word 4',
-    'Key Word 5',
-    'Key Word 6'
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
+    data.keywords[this.getRandomInt()],
   ];
-
   done = [
     'Key Word 7',
     'Key Word 8'
   ];
-
+  getRandomInt() {
+    return Math.floor(Math.random() * Object.keys( data.keywords ).length);
+  }
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -136,9 +148,10 @@ export class UserInterestComponent implements OnInit {
       assessment:'Quiz/test',
     }
   ];
- 
 
   onChangeCategory(event, assessment_types: any){ // Use appropriate model type instead of any
     this.assignment_array.assignment_types.push(assessment_types.assessment);
   }
 }
+
+
