@@ -5,6 +5,7 @@ import { Session } from 'src/app/Models/SessionModel';
 import { User } from 'src/app/Models/UserModel';
 import { DataSharingService } from 'src/app/Services/data-sharing.service';
 import { Location } from "@angular/common";
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-navbar',
@@ -29,6 +30,7 @@ export class NavbarComponent implements OnInit {
   constructor(private http: HttpClient,
               private route: Router,
               private dataSharingService: DataSharingService,
+              private cookieService: CookieService,
               location: Location
               ) {
                 // Subscribe here, this will automatically update 
@@ -72,6 +74,7 @@ export class NavbarComponent implements OnInit {
 
   clickMethod(name: string) {
     if(confirm("Are you sure you want to Sign Out?")) {
+      this.cookieService.set( 'session_id', '' );
       window.location.reload();
       alert("User has successfully logged out");
       console.log("User has logged out of current session");

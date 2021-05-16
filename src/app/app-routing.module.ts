@@ -69,12 +69,14 @@ const routes: Routes = [
     path: 'userInterests',
     pathMatch: 'full',
     component:UserInterestComponent,
+    canActivate: [UserAuthenticationGuard],
     data : { animation : 'isUserInterests'}
   },
   {
     path: 'userPage',
     pathMatch: 'full',
     component:UserPageComponent,
+    canActivate: [UserAuthenticationGuard],
     data : { animation : 'isUserPage'}
   },
   {
