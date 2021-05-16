@@ -31,6 +31,7 @@ export class UserInterestComponent implements OnInit {
 
   public show:boolean = false;
   public buttonName:any = 'Begin Questionnaire';
+  assignment_array: any = { "assignment_types": [] };
 
   constructor() { }
 
@@ -136,4 +137,8 @@ export class UserInterestComponent implements OnInit {
     }
   ];
  
+
+  onChangeCategory(event, assessment_types: any){ // Use appropriate model type instead of any
+    this.assignment_array.assignment_types.push(assessment_types.assessment);
+  }
 }
