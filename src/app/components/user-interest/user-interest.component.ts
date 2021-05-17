@@ -8,6 +8,11 @@ import {
   transition
 } from '@angular/animations';
 import * as data from 'src/assets/json/keywords.json';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
+import { ISession } from 'src/app/Models/ISession';
+import { Session } from 'src/app/Models/SessionModel';
+import { Router } from '@angular/router';
+import { Recommendation } from 'src/app/Models/RecommendationModel';
 
 @Component({
   selector: 'app-user-interest',
@@ -27,11 +32,17 @@ import * as data from 'src/assets/json/keywords.json';
   ]
 })
 export class UserInterestComponent implements OnInit {
-  public show:boolean = false;
-  public buttonName:any = 'Begin Questionnaire';
+  show: boolean = false;
+  buttonName: any = 'Begin Questionnaire';
+  GroupAssignment: number;
+  session: string;
+ 
   assignment_array: any = { "assignment_types": [] };
 
-  constructor() { }
+  constructor(private http: HttpClient,
+              private route: Router) {
+    this.session = Session.id;
+   }
 
   ngOnInit(): void {
 
@@ -77,9 +88,9 @@ export class UserInterestComponent implements OnInit {
     data.keywords[this.getRandomInt()],
   ];
   done = [
-    'Key Word 7',
-    'Key Word 8'
+    
   ];
+
   getRandomInt() {
     return Math.floor(Math.random() * Object.keys( data.keywords ).length);
   }
@@ -151,6 +162,25 @@ export class UserInterestComponent implements OnInit {
 
   onChangeCategory(event, assessment_types: any){ // Use appropriate model type instead of any
     this.assignment_array.assignment_types.push(assessment_types.assessment);
+  }
+
+  submitUserInterests(){
+    const body = new HttpParams()
+    .set('assignment_types', JSON.stringify(this.assignment_array))
+    .set('group_assignments', "1" ) // switch it to a the real variable
+    .set('keywords', JSON.stringify(this.done))
+
+    const headers = new HttpHeaders()
+      .set('Content-Type', 'application/x-www-form-urlencoded')
+      .set('session_id', this.session);
+      // alert(this.session);
+
+    this.http.post<ISession>('https://cr-backend.herokuapp.com/recommendation', body.toString(), { headers: headers})
+    .subscribe(data => {
+      console.log(data);
+    })
+
+    this.route.navigate(['/userPage']);
   }
 }
 
