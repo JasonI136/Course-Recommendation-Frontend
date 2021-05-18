@@ -36,6 +36,7 @@ export class UserInterestComponent implements OnInit {
   buttonName: any = 'Begin Questionnaire';
   GroupAssignment: number;
   session: string;
+  loading: boolean = false;
  
   assignment_array: any = { "assignment_types": [] };
 
@@ -177,6 +178,7 @@ export class UserInterestComponent implements OnInit {
     }
     else
     {
+      this.loading = true;
       const body = new HttpParams()
       .set('assignment_types', JSON.stringify(this.assignment_array))
       .set('group_assignments', "1" ) // switch it to a the real variable
