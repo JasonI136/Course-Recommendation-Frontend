@@ -13,7 +13,7 @@
         <h2 class='recommendedSubjecsTitle'>
           Recommended Subjects <h2 id="recommendedName">for {{studentDetails.fName}} {{studentDetails.sName}}</h2>
         </h2>
-
+        
         <div class="col-md-6 col-sm-6 subjectRecommendationBlock" *ngFor="let rec of RecommendationArray[0]">
           <a href="https://handbook.uts.edu.au/subjects/{{rec.subject_code}}.html" target="_blank">
             <div class="item courses-info courses-thumb">
@@ -28,49 +28,6 @@
             </div>
           </a>
         </div>
-
-        <!-- <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
-          <a href="#" target="_blank">
-            <div class="item courses-info courses-thumb">
-              <div class="courses-author">
-                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon" alt="">
-                <div class="courses-author">
-                  <span>Design and Innovation Fundamentals</span>
-                  <div class="courseNumLabel">Course Num: 123456</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
-          <a href="#" target="_blank">
-            <div class="item courses-info courses-thumb">
-              <div class="courses-author">
-                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon" alt="">
-                <div class="courses-author">
-                  <span>Software Engineering Studio 1A</span>
-                  <div class="courseNumLabel">Course Num: 123456</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
-
-        <div class="col-md-6 col-sm-6 subjectRecommendationBlock">
-          <a href="#" target="_blank">
-            <div class="item courses-info courses-thumb">
-              <div class="courses-author">
-                <img src="assets/images/LaptopIcon.png" class="img-responsive CourseIcon " alt="">
-                <div class="courses-author">
-                  <span>Information System Development Methodologies</span>
-                  <div class="courseNumLabel">Course Num: 123456</div>
-                </div>
-              </div>
-            </div>
-          </a>
-        </div> -->
-
       </div>
     </div>
   </div>
