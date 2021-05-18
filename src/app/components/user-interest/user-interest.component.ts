@@ -170,6 +170,10 @@ export class UserInterestComponent implements OnInit {
     .set('group_assignments', "1" ) // switch it to a the real variable
     .set('keywords', JSON.stringify(this.done))
 
+    // console.log("1 Assignment Type: " + this.assignment_array.assignment_types);
+    // console.log("2 Group Assignments: " + "1");
+    // console.log("3 Keywords: " + JSON.stringify(this.done));
+
     const headers = new HttpHeaders()
       .set('Content-Type', 'application/x-www-form-urlencoded')
       .set('session_id', this.session);
@@ -177,10 +181,14 @@ export class UserInterestComponent implements OnInit {
 
     this.http.post<ISession>('https://cr-backend.herokuapp.com/recommendation', body.toString(), { headers: headers})
     .subscribe(data => {
-      console.log(data);
+      Recommendation.course = [];
+      Recommendation.course.length = 0;
+      Recommendation.course.push(data);
+
+      this.route.navigate(['/course/courseRecommendations']);
     })
 
-    this.route.navigate(['/userPage']);
+    
   }
 }
 

@@ -1,6 +1,5 @@
 export class Recommendation {
-    course = [
-        
-    ];
-   
+    static course = [
+
+    ]
 }
